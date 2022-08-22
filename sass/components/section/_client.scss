@@ -1,0 +1,34 @@
+.client {
+    @extend %section;
+}
+
+.client__list {
+    @extend %list;
+
+    display: flex;
+    gap: var(--indent);
+
+    align-items: center;
+    justify-content: center;
+}
+
+.client__link {
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--svg-primary-color);
+    border-radius: 4px;
+
+    align-items: center;
+    justify-content: center;
+
+    color: var(--svg-primary-color);
+
+    transition: color var(--duration-timing), border var(--duration-timing);
+}
+
+.client__link:hover,
+.client__link:focus {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color)
+}

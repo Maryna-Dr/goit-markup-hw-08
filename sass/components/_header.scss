@@ -1,0 +1,41 @@
+.header {
+    border: 1px solid var(--header-border-cl);
+}
+
+.header__container {
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 93px;
+}
+
+// Header contacts group
+.header__group {
+    @extend %list;
+
+    margin-left: auto;
+    align-self: center;
+    gap: 50px;
+}
+
+.header__link {
+    display: flex;
+    gap: 10px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    color: var(--primary-text-color);
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition: color var(--duration-timing);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}

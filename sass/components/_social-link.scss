@@ -1,0 +1,44 @@
+.social {
+    @extend %list;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.social__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    align-items: center;
+    justify-content: center;
+
+    // primary (section "footer", social links WebStudio)
+    &--primary {
+        color: var(--primary-white-color);
+        background-color: var(--svg-bgc-footer);
+    
+        transition: background-color var(--duration-timing);
+
+        &:hover,
+        &:focus {
+            background-color: var(--accent-color);
+        }
+    }
+
+    // secondary (section "team", employee's social links)
+    &--secondary {
+        color: var(--svg-primary-color);
+        transition: color var(--duration-timing), background-color var(--duration-timing);
+
+        &:hover,
+        &:focus {
+            background-color: var(--accent-color);
+            color: var(--primary-white-color);
+        }
+    }
+}

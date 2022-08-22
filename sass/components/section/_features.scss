@@ -1,0 +1,33 @@
+.features {
+    @extend %section;
+}
+
+.features__list {
+    @extend %list;
+}
+
+.features__item {
+    --item: 4;
+}
+
+.features__icon-box {
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--secondary-bg-color);
+    border-radius: 4px;
+}
+
+.features__subtitle {
+    @extend %subtitle;
+    
+    color: var(--title-text-color);
+}
+
+.features__text {
+    line-height: 1.71;
+}
