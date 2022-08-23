@@ -1,44 +1,49 @@
 .social {
-    @extend %list;
+  @extend %list;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .social__link {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
 
-    align-items: center;
-    justify-content: center;
+  border-radius: 50%;
 
+  color: var(--svg-primary-color);
+}
+
+@include mq(desk) {
+  .social__link {
     // primary (section "footer", social links WebStudio)
     &--primary {
-        color: var(--primary-white-color);
-        background-color: var(--svg-bgc-footer);
-    
-        transition: background-color var(--duration-timing);
+      color: var(--primary-white-color);
+      background-color: var(--svg-bgc-footer);
 
-        &:hover,
-        &:focus {
-            background-color: var(--accent-color);
-        }
+      transition: background-color var(--duration-timing);
+
+      &:hover,
+      &:focus {
+        background-color: var(--accent-color);
+      }
     }
 
     // secondary (section "team", employee's social links)
     &--secondary {
-        color: var(--svg-primary-color);
-        transition: color var(--duration-timing), background-color var(--duration-timing);
+      transition: color var(--duration-timing),
+        background-color var(--duration-timing);
 
-        &:hover,
-        &:focus {
-            background-color: var(--accent-color);
-            color: var(--primary-white-color);
-        }
+      &:hover,
+      &:focus {
+        background-color: var(--accent-color);
+        color: var(--primary-white-color);
+      }
     }
+  }
 }

@@ -1,34 +1,37 @@
 .work {
-    @extend %section;
-    
+  display: none;
+
+  @include mq(desk) {
+    display: block;
     padding-top: 0;
+    padding-bottom: 94px;
+  }
 }
 
 .work__list {
-    @extend %list;
+  @extend %list;
 }
 
 .work__item {
-    position: relative;
+  position: relative;
 }
 
 .work__subtitle {
-    @extend %subtitle;
-    
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
+  @extend %subtitle;
 
-    width: 370px;
-    margin-bottom: 0;
-    padding-top: 27px;
-    padding-bottom: 27px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
 
-    font-weight: 700;
-    text-align: center;
+  width: 370px;
+  margin-bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
 
+  font-weight: 700;
+  text-align: center;
 
-    color: var(--primary-white-color);
-    background-color: var(--caption-bg-color);
+  color: var(--primary-white-color);
+  background-color: var(--caption-bg-color);
 }

@@ -1,12 +1,28 @@
 .portfolio {
-    @extend %section;
+  @extend %section;
+
+  @include mq(desk) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 // Portfolio navigation
 .portfolio__nav-list {
-    @extend %list;
+  @extend %list;
+  flex-wrap: wrap;
+  gap: 15px 8px;
+  margin-bottom: 40px;
 
+  @include mq(mob-only) {
+    max-width: 326px;
+  }
+
+  @include mq(tab) {
+    flex-wrap: nowrap;
+    width: 100%;
     justify-content: center;
-    gap: 8px;
+
     margin-bottom: 50px;
+  }
 }

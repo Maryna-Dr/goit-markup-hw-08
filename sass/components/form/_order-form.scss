@@ -1,132 +1,142 @@
 .order-form {
-    &__title {
-        display: block;
-        margin-bottom: 12px;
-    
-        font-size: 20px;
-        line-height: 1.15;
-        text-align: center;
-    
-        color: var(--title-text-color);
-    }
-
-    &__user-data {
-        margin-bottom: 20px;
-    }
-
-    &__wrap {
-        position: relative;
-    
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        margin-bottom: 10px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    &__label {
-        font-size: 12px;
-        line-height: 1.17;
-        letter-spacing: 0.01em;
-    
-        color: var(--primary-text-color);
-    }
-}
-
-.order-form__field {
-    width: 100%;
-    padding: 11px 42px;
-
-    line-height: 1.17;
-    letter-spacing: 0.01em;
-
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    outline: transparent;
-
-    transition: border-color var(--duration-timing);
-
-    &:focus {
-        border-color: var(--accent-color);
-    }
-}
-
-.order-form__icon {
-    position: absolute;
+  &__title {
     display: block;
-    bottom: 11px;
-    left: 11px;
+    margin-bottom: 12px;
 
-    fill: var(--title-text-color);
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
 
-    transition: fill var(--duration-timing);
+    color: var(--title-text-color);
+  }
 
-    .order-form__field:focus+& {
-        fill: var(--accent-color);
+  &__user-data {
+    margin-bottom: 20px;
+  }
+
+  &__wrap {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
     }
-}
+  }
 
-.order-form__comment {
-    width: 100%;
-    min-height: 120px;
-    padding: 12px 16px;
-    resize: none;
-
+  &__label {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
 
-    color: rgba(117, 117, 117, 0.5);
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    outline: transparent;
+    color: var(--primary-text-color);
+  }
+}
 
-    transition: border-color var(--duration-timing);
+.order-form__field {
+  width: 100%;
+  padding: 11px 42px;
 
-    &:focus {
-        border-color: var(--accent-color);
-    }
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  transition: border-color var(--duration-timing);
+
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+.order-form__icon {
+  position: absolute;
+  display: block;
+  bottom: 11px;
+  left: 11px;
+
+  fill: var(--title-text-color);
+
+  transition: fill var(--duration-timing);
+
+  .order-form__field:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+.order-form__comment {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 16px;
+  resize: none;
+
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  transition: border-color var(--duration-timing);
+
+  &:focus {
+    border-color: var(--accent-color);
+  }
+
+  @include mq(desk) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 // Agreement
 .order-form__agreement {
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
 }
 
 .order-form__uncheck {
-    fill: var(--title-text-color);
+  fill: var(--title-text-color);
 
-    .order-form__checkbox:checked+.order-form__check-icon>& {
-        opacity: 0;
-    }
+  .order-form__checkbox:checked + .order-form__check-icon > & {
+    opacity: 0;
+  }
 }
 
 .order-form__check {
-    opacity: 0;
+  opacity: 0;
 
-    .order-form__checkbox:checked+.order-form__check-icon>& {
-        opacity: 1;
-    }
+  .order-form__checkbox:checked + .order-form__check-icon > & {
+    opacity: 1;
+  }
 }
 
 .order-form__text {
-    line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
 
-    color: var(--primary-text-color);
+  color: var(--primary-text-color);
+
+  @include mq(desk) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .order-form__link {
-    color: var(--accent-color);
-    text-underline-position: under;
+  color: var(--accent-color);
+  text-underline-position: under;
 }
 
 .order-form__btn-primary {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }

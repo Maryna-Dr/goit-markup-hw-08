@@ -26,6 +26,17 @@
           <span class="logo__part logo__part--accent">Web</span>Studio
         </a>
 
+        <!-- Burger menu -->
+        <button
+          class="menu-burger header__menu-burger js-open-menu"
+          type="submit"
+          aria-expanded="false"
+        >
+          <svg class="menu-burger__icon" width="40" height="40">
+            <use href="./images/icon/icons.svg#menu-burger"></use>
+          </svg>
+        </button>
+
         <!-- Header navigation -->
         <nav class="nav flex">
           <ul class="nav__list flex">
@@ -47,7 +58,7 @@
         <ul class="header__group flex">
           <li class="header__item">
             <a class="header__link" href="mailto:info@devstudio.com" lang="en">
-              <svg width="16" height="12">
+              <svg class="header__icon-msg" width="16" height="12">
                 <use href="./images/icon/icons.svg#message"></use>
               </svg>
               info@devstudio.com
@@ -55,7 +66,7 @@
           </li>
           <li class="header__item">
             <a class="header__link" href="tel:+380961111111">
-              <svg width="10" height="16">
+              <svg class="header__icon-tel" width="10" height="16">
                 <use href="./images/icon/icons.svg#tel"></use>
               </svg>
               +38 096 111 11 11
@@ -147,7 +158,11 @@
           <ul class="work__list card-set">
             <li class="work__item card-set-item">
               <img
-                src="./images/Work/img-1.jpg"
+                srcset="
+                  ./images/work/img-1@1x_lg.jpg 1x,
+                  ./images/work/img-1@2x_lg.jpg 2x
+                "
+                src="./images/work/img-1@1x_lg.jpg"
                 alt="Робочий стіл з ноутбуком та планшетом, людина набирає код"
                 width="370"
                 height="294"
@@ -156,7 +171,11 @@
             </li>
             <li class="work__item card-set-item">
               <img
-                src="./images/Work/img-2.jpg"
+                srcset="
+                  ./images/work/img-2@1x_lg.jpg 1x,
+                  ./images/work/img-2@2x_lg.jpg 2x
+                "
+                src="./images/work/img-2@1x_lg.jpg"
                 alt="Ноутбук із зображенням трьох прототипів інтерфейсу для смартфону"
                 width="370"
                 height="294"
@@ -165,7 +184,11 @@
             </li>
             <li class="work__item card-set-item">
               <img
-                src="./images/Work/img-3.jpg"
+                srcset="
+                  ./images/work/img-3@1x_lg.jpg 1x,
+                  ./images/work/img-3@2x_lg.jpg 2x
+                "
+                src="./images/work/img-3@1x_lg.jpg"
                 alt="Планшет з палітрою кольорів на фоні робочого столу"
                 width="370"
                 height="294"
@@ -185,10 +208,19 @@
             <li class="team__item card-set-item">
               <img
                 class="team__photo"
-                src="./images/Team/img-1.jpg"
+                srcset="
+                  ./images/team/desk/img-1_270.jpg 270w,
+                  ./images/team/tab/img-1_354.jpg  354w,
+                  ./images/team/mob/img-1_450.jpg  450w,
+                  ./images/team/desk/img-1_540.jpg 540w,
+                  ./images/team/tab/img-1_708.jpg  708w,
+                  ./images/team/mob/img-1_900.jpg  900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
+                src="./images/team/mob/img-1_450.jpg"
                 alt="Чоловік в коричневій рубашці, який посміхається"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <!-- About emloyee -->
               <div class="team__employee-box">
@@ -254,11 +286,20 @@
 
             <li class="team__item card-set-item">
               <img
+                srcset="
+                  ./images/team/desk/img-2_270.jpg 270w,
+                  ./images/team/tab/img-2_354.jpg  354w,
+                  ./images/team/mob/img-2_450.jpg  450w,
+                  ./images/team/desk/img-2_540.jpg 540w,
+                  ./images/team/tab/img-2_708.jpg  708w,
+                  ./images/team/mob/img-2_900.jpg  900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
                 class="team__photo"
-                src="./images/Team/img-2.jpg"
+                src="./images/team/mob/img-2_450.jpg"
                 alt="Жінка в чорному піджаку та окулярах посміхається"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <!-- About employee -->
               <div class="team__employee-box">
@@ -324,11 +365,20 @@
 
             <li class="team__item card-set-item">
               <img
+                srcset="
+                  ./images/team/desk/img-3_270.jpg 270w,
+                  ./images/team/tab/img-3_354.jpg  354w,
+                  ./images/team/mob/img-3_450.jpg  450w,
+                  ./images/team/desk/img-3_540.jpg 540w,
+                  ./images/team/tab/img-3_708.jpg  708w,
+                  ./images/team/mob/img-3_900.jpg  900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
                 class="team__photo"
-                src="./images/Team/img-3.jpg"
+                src="./images/team/mob/img-3_450.jpg"
                 alt="Чоловік дивитися в бік від об'єктиву і посміхається"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <!-- About employee -->
               <div class="team__employee-box">
@@ -394,11 +444,20 @@
 
             <li class="team__item card-set-item">
               <img
+                srcset="
+                  ./images/team/desk/img-4_270.jpg 270w,
+                  ./images/team/tab/img-4_354.jpg  354w,
+                  ./images/team/mob/img-4_450.jpg  450w,
+                  ./images/team/desk/img-4_540.jpg 540w,
+                  ./images/team/tab/img-4_708.jpg  708w,
+                  ./images/team/mob/img-4_900.jpg  900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, 100vw"
                 class="team__photo"
-                src="./images/Team/img-4.jpg"
+                src="./images/team/mob/img-4_450.jpg"
                 alt="Чоловік в чорній футболці та окулярах"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <!-- About employee -->
               <div class="team__employee-box">
@@ -656,13 +715,15 @@
           </h2>
           <form class="mail-form flex" name="mailing-form">
             <!-- <label> -->
-            <input
-              class="mail-form__input"
-              type="email"
-              name="mailing-email"
-              placeholder="E-mail"
-            />
-            <!-- </label> -->
+            <label class="mail-form__label">
+              <input
+                class="mail-form__input"
+                type="email"
+                name="mailing-email"
+                placeholder="E-mail"
+              />
+            </label>
+
             <button class="btn-primary" type="submit">
               Підписатися
               <svg width="24" height="24">
@@ -674,6 +735,7 @@
       </div>
     </footer>
 
+    <!-- Order modal (from hero-btn) -->
     <!-- Modal -->
     <div class="backdrop backdrop--hidden" data-modal>
       <div class="order-modal">
@@ -688,7 +750,6 @@
             >Залиште свої дані, ми вам передзвонимо</strong
           >
 
-          <!-- Order group (user data) -->
           <div class="order-form__user-data" role="group">
             <label class="order-form__wrap">
               <span class="order-form__label">Ім'я</span>
@@ -722,7 +783,6 @@
             </label>
           </div>
 
-          <!-- Order agreement -->
           <label class="order-form__agreement flex">
             <input
               class="order-form__checkbox visually-hidden"
@@ -758,6 +818,77 @@
       </div>
     </div>
 
+    <!-- Mobile menu -->
+
+    <div class="mobile-menu flex js-menu-container">
+      <button class="menu-close js-close-menu" type="button">
+        <svg class="menu-burger__icon" width="40" height="40">
+          <use href="./images/icon/icons.svg#menu-close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu__nav flex">
+        <li class="mobile-menu__item">
+          <a
+            class="mobile-menu__page mobile-menu__page--current"
+            href="./index.html"
+            >Студія</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__page" href="./portfolio.html">Портфоліо</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__page" href="">Контакти</a>
+        </li>
+      </ul>
+
+      <ul class="mobile-menu__group flex">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link-tel" href="tel:+380961111111">
+            +38 096 111 11 11
+          </a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            class="mobile-menu__link-mail"
+            href="mailto:info@devstudio.com"
+            lang="en"
+          >
+            info@devstudio.com
+          </a>
+        </li>
+      </ul>
+      <ul class="mobile-menu__social flex">
+        <li class="mobile-menu__point">
+          <a class="mobile-menu__social-link" href="" target="_blank">
+            Instagram
+          </a>
+        </li>
+        <li class="mobile-menu__point">
+          <a class="mobile-menu__social-link" href="" target="_blank">
+            Twitter
+          </a>
+        </li>
+        <li class="mobile-menu__point">
+          <a class="mobile-menu__social-link" href="" target="_blank">
+            Facebook
+          </a>
+        </li>
+        <li class="mobile-menu__point">
+          <a class="mobile-menu__social-link" href="" target="_blank">
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

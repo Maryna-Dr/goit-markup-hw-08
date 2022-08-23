@@ -1,33 +1,49 @@
 .features {
-    @extend %section;
+  @extend %section;
+
+  @include mq(desk) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .features__list {
-    @extend %list;
+  @extend %list;
 }
 
 .features__item {
+  --item: 1;
+
+  @include mq(tab) {
+    --item: 2;
+  }
+
+  @include mq(desk) {
     --item: 4;
+  }
 }
 
 .features__icon-box {
-    width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
+  height: 120px;
+  margin-bottom: 30px;
 
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 
-    background-color: var(--secondary-bg-color);
-    border-radius: 4px;
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
 }
 
 .features__subtitle {
-    @extend %subtitle;
-    
-    color: var(--title-text-color);
+  @extend %subtitle;
+
+  color: var(--title-text-color);
+
+  @include mq(mob-only) {
+    text-align: center;
+  }
 }
 
 .features__text {
-    line-height: 1.71;
+  line-height: 1.71;
 }

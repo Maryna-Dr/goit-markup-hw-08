@@ -1,34 +1,53 @@
 .client {
-    @extend %section;
+  @extend %section;
+
+  @include mq(desk) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .client__list {
-    @extend %list;
+  @extend %list;
+  --gap: 30px;
 
-    display: flex;
-    gap: var(--indent);
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
 
-    align-items: center;
-    justify-content: center;
+.client__item {
+  --column: 2;
+
+  width: calc((100% - (var(--gap) * (var(--column) - 1))) / var(--column));
+
+  @include mq(tab) {
+    --column: 3;
+  }
+
+  @include mq(desk) {
+    --column: 6;
+  }
 }
 
 .client__link {
-    display: flex;
-    width: 170px;
-    height: 92px;
-    border: 1px solid var(--svg-primary-color);
-    border-radius: 4px;
+  display: flex;
+  min-height: 92px;
 
-    align-items: center;
-    justify-content: center;
+  border: 1px solid var(--svg-primary-color);
+  border-radius: 4px;
 
-    color: var(--svg-primary-color);
+  align-items: center;
+  justify-content: center;
 
-    transition: color var(--duration-timing), border var(--duration-timing);
+  color: var(--svg-primary-color);
+
+  transition: color var(--duration-timing), border var(--duration-timing);
 }
+
 
 .client__link:hover,
 .client__link:focus {
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color)
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
 }

@@ -1,43 +1,60 @@
 .team {
-    @extend %section;
-    
-    background-color: var(--secondary-bg-color);
+  @extend %section;
+
+  @include mq(desk) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  background-color: var(--secondary-bg-color);
 }
 
 .team__list {
-    @extend %list;
+  @extend %list;
+
+  --item: 1;
+
+  @include mq(tab) {
+    --item: 2;
+  }
+
+  @include mq(desk) {
     --item: 4;
+  }
 }
 
 .team__item {
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 
-    background-color: var(--primary-white-color);
+  background-color: var(--primary-white-color);
 }
 
 .team__employee-box {
-    padding-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+
+  @include mq(desk) {
     padding-bottom: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+  }
 }
 
 .team__employee {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    color: var(--title-text-color);
+  color: var(--title-text-color);
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    text-align: center;
+  font-weight: 500;
+  font-size: inherit;
 }
 
 .team__text {
-    font-size: 16px;
-    line-height: 1.19;
-    text-align: center;
-
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }

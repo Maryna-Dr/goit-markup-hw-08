@@ -1,41 +1,84 @@
 .header {
-    border: 1px solid var(--header-border-cl);
+  border: 1px solid var(--header-border-cl);
 }
 
 .header__container {
-    align-items: center;
+  align-items: center;
 }
 
 .header__logo {
+  @include mq(tab) {
+    margin-right: 88px;
+  }
+
+  @include mq(desk) {
     margin-right: 93px;
+  }
+
+  @include mq(mob-only) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
 // Header contacts group
 .header__group {
-    @extend %list;
+  @extend %list;
 
-    margin-left: auto;
-    align-self: center;
-    gap: 50px;
+  margin-left: auto;
+  align-self: center;
+  gap: 10px;
+  //   gap: 50px;
+
+  @include mq(mob-only) {
+    display: none;
+  }
+
+  @include mq(tab-only) {
+    flex-direction: column;
+  }
+
+  @include mq(desk) {
+    gap: 30px;
+  }
 }
 
 .header__link {
-    display: flex;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  color: var(--primary-text-color);
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  transition: color var(--duration-timing);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  @include mq(desk) {
     gap: 10px;
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+}
 
-    color: var(--primary-text-color);
+.header__icon-msg {
+  @include mq(tab-only) {
+    width: 14px;
+    height: 10px;
+  }
+}
 
-    font-weight: 500;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-
-    transition: color var(--duration-timing);
-
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-    }
+.header__icon-tel {
+  @include mq(tab-only) {
+    width: 10px;
+    height: 14px;
+  }
 }
