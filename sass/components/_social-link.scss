@@ -17,33 +17,28 @@
   border-radius: 50%;
 
   color: var(--svg-primary-color);
-}
 
-@include mq(desk) {
-  .social__link {
-    // primary (section "footer", social links WebStudio)
-    &--primary {
-      color: var(--primary-white-color);
-      background-color: var(--svg-bgc-footer);
+  // primary (section "footer", social links WebStudio)
+  &--primary {
+    color: var(--primary-white-color);
+    background-color: var(--svg-bgc-footer);
 
-      transition: background-color var(--duration-timing);
+    transition: background-color var(--duration-timing);
 
-      &:hover,
-      &:focus {
-        background-color: var(--accent-color);
-      }
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
     }
+  }
+  // secondary (section "team", employee's social links)
+  &--secondary {
+    transition: color var(--duration-timing),
+      background-color var(--duration-timing);
 
-    // secondary (section "team", employee's social links)
-    &--secondary {
-      transition: color var(--duration-timing),
-        background-color var(--duration-timing);
-
-      &:hover,
-      &:focus {
-        background-color: var(--accent-color);
-        color: var(--primary-white-color);
-      }
+    &:hover,
+    &:focus {
+      background-color: var(--accent-color);
+      color: var(--primary-white-color);
     }
   }
 }

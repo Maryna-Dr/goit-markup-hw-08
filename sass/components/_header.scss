@@ -62,6 +62,11 @@
     color: var(--accent-color);
   }
 
+  @include mq(tab-only) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+
   @include mq(desk) {
     gap: 10px;
     padding-top: 32px;

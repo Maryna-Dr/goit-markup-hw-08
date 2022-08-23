@@ -31,6 +31,7 @@
 
   @include mq(desk) {
     align-items: flex-start;
+    margin-bottom: 0;
   }
 }
 
@@ -80,6 +81,7 @@
 .footer__join {
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   margin-bottom: 60px;
 
@@ -89,6 +91,7 @@
 
   @include mq(desk) {
     margin-left: 70px;
+    margin-bottom: 0;
   }
 }
 
