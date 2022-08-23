@@ -1,5 +1,4 @@
 .hero {
-  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 118px;
@@ -27,8 +26,6 @@
 
   //   For tablet
   @include mq(tab-only) {
-    max-width: 768px;
-
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
@@ -47,7 +44,6 @@
   }
   //   For desktop
   @include mq(desk) {
-    max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
 
