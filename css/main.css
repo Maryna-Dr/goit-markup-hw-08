@@ -1362,8 +1362,8 @@ body {
   transition: -webkit-transform var(--duration-timing);
   transition: transform var(--duration-timing);
   transition: transform var(--duration-timing), -webkit-transform var(--duration-timing);
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
   color: var(--primary-white-color);
   background-color: var(--portf-overlay-bgc);
 }
